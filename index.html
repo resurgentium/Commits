@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/reset.css" rel="stylesheet" type="text/css"/> 
+	<link href="css/styles.css" rel="stylesheet" type="text/css"/> 
+	<title>Санкт-Петербургский Планетарий</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div class="site-block">
+	<header>
+		<img class="logo" src="images/Logotip.png" title="Логотип" alt="Логотип"/>
+		<h1><strong>САНКТ-ПЕТЕРБУРГСКИЙ<br />ПЛАНЕТАРИЙ</strong></h1>
+		<div class="nav-toggle"><span></span></div>
+	
+			<div class="menu"> 
+				<ul id="clmenu">
+					<li><a href="index.html">Главная</a></li> <!-- href - ссылка -->
+					<li><a href="#">Посетителям</a>
+						<ul class="sub-menu">
+							<li><a href="pages/map.html">Как добраться</a></li>
+							<li><a href="pages/tickets.html">Билеты</a></li>
+							<li><a href="pages/rules.html">Правила</a></li>
+						</ul>
+					</li>	
+					<li><a href="pages/history.html">История</a></li>
+					<li><a href="#">Фотогалерея</a>
+						<ul class="sub-menu">
+							<li><a href="pages/photo.html">Фото</a></li>
+							<li><a href="pages/video.html">Видео / Аудио</a></li>
+						</ul>
+					</li>
+					<li><a href="pages/news.html">Афиша</a></li>
+					<li><a href="pages/halls.html">Залы планетария</a></li>
+					<li><a href="pages/exe.html">Контакты</a></li> <!-- Регистрация -->
+				</ul>
+			</div> 
+	</header>
+			<hr class="gabionade"><p></p><hr>
+	<div class="block-content2">
+		<div class="content-right">
+			<div class="sliderA">
+				<input type="radio" name="slider2" id="1photo" checked="checked">
+					<label for="1photo"></label>
+					<div class="slimages"><img src="images/15photo.jpg" title="слайдер" alt=""></div>
+					<label for="1photo"></label>
+					<input type="radio" name="slider2" id="2photo">
+					<label for="2photo"></label>
+					<div class="slimages"><img src="images/3photo.jpg" title="слайдер" alt=""></div>
+					<label for="2photo"></label>
+					<input type="radio" name="slider2" id="3photo">
+					<label for="3photo"></label>
+					<div class="slimages"><img src="images/2photo.jpg" title="слайдер" alt=""></div>
+					<label for="3photo"></label>
+			</div>
+		</div>
+		<div class="content-text">
+			<div class="content-left">
+				ТЕЛЕФОНЫ ДЛЯ СПРАВОК<br/> <!-- br/ - переход на новую строку, одноразовый -->
+			</div> 
+			<div class="content-left1">
+				(812) 233 26 53<br/>(812) 233 49 56<br/>
+			</div>
+&ensp; <!-- пробел -->
+			<div class="content-left2">
+				КАК НАЙТИ ПЛАНЕТАРИЙ<br/>
+			</div>
+			<div class="content-left3">
+				м. Горьковская,<br/>м. Спортивная<br/>Александровский парк д.4
+			</div>
+		</div>
+&ensp;
+	<form method="get" action="/search" id="searchform">
+		<input name="s" size="20" type="search" placeholder="поиск по сайту">
+        <input type="submit" value="искать">
+	</form>
+&ensp;
+	</div>
+	<div class="footer">
+		<div class="basement"><span>Copyright © by Anastasia Sloboda, 2018</span><br>
+		<a  class="post" href="mailto:Birt.nastya15@yandex.ru" title="Написать письмо">Написать автору сайта</a></div>
+	</div>
+</div>
+<script>
+$('.nav-toggle').on('click', function(){
+$('#clmenu').toggleClass('active');
+});
+</script>
+</body>
+</html>
+
+
+
+
+
