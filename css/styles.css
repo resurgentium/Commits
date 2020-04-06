@@ -1,0 +1,503 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+.site-block{
+	max-width:1024px;
+	margin:0 auto;
+}
+header h1 {
+	width: 100%;
+	font: 40px "Arial";
+	margin: 30px 0; 
+	color: #F0E68C;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+
+/* логотип */
+.logo {
+display: block; 
+float: left;
+width: 200px;
+height: 200px;
+}	
+nav {
+width: 100%; 
+}
+body{
+	background-image: url(../images/BACKGROUND3.jpg);
+	background-color: #1a3832;
+	background-size: 100% ;  
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	
+}
+A {
+color:#F0E68C;
+}
+.menu{
+	clear: both;
+	font: 22px "Arial";
+	text-align: center;
+	color: #0f5d8b; /* Тень линии */ 
+}
+.menu li{
+	display:inline-block;
+	margin: 15px;
+	 position:relative;
+	/* background: #5F9EA0; */
+	 /* padding: 6px;   */
+}
+.menu li:hover a{
+	/* background:#4c8688; */
+	/* box-shadow: 0 0 5px rgba(0, 0, 0, .3) solid; */
+	padding: 3px; /* Плавно перекатывается - карусель */
+}
+.menu li:hover > ul { /* Чтобы не перекрывал текст */
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+.menu li:hover {
+	background:#4c8688;
+}
+
+/* Выпадающее меню */
+.menu a{
+	text-decoration: none;
+/*  	color: #F0E68C;  */
+	transition: .5s;
+}
+.menu ul > li{
+	display: inline-block;
+ 	padding: 10px; 
+	position: relative;
+	margin: 0; /* Пробел между блоками */
+}
+.menu ul > li:hover .sub-menu {
+	display: block;
+}
+.sub-menu li{
+	background:#43393a;
+	padding: 10px;
+	width: 100%;
+}
+.sub-menu {
+	display: none; 
+	position: absolute;
+	
+/* 	top: 100%;  */
+ 	left: 0; 
+	list-style:none;
+	text-align: left;
+	transition: .3s;
+}
+/* Конец */
+
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+display: none;
+position: relative;
+float: right;
+width: 40px;
+height: 40px;
+margin-left: 20px;
+background: #1a3832;
+cursor: pointer;
+}
+.nav-toggle span {
+display: block;
+position: absolute;
+top: 19px;
+left: 8px;
+right: 8px;
+height: 2px;
+background: #F0E68C;
+}
+.nav-toggle span:before, .nav-toggle span:after {
+content: "";
+position: absolute;
+display: block;
+left: 0;
+width: 100%;
+height: 2px;
+background: #F0E68C;
+}
+.nav-toggle span:before {
+top: -10px;
+}
+.nav-toggle span:after {
+bottom: -10px;
+}
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#clmenu.active {
+max-height: 1500px;
+}
+
+/* Линия */
+.gabionade{
+	border: none;
+	height: 14px;
+	width: 100%;
+	box-shadow: inset 0 -6px 6px;
+	color: #0d6493;
+	background: none;
+}
+/* Конец */
+.content-right{
+	float: right;
+	margin: 0 0 0 0;
+}
+.content-text {
+	/* float: left; */
+	margin: 15px 0 0 30px;
+}
+.content-left{
+	font: 30px "Arial";
+	/* margin: 30px 159px;   */
+	color: #3c342f;
+	text-align: center;
+	font-weight: bold;
+}
+.content-left1{
+	font: 30px "Arial";
+	/* margin: 0 159px;   */
+	color: #c8e19d;
+	text-align: center;
+	font-weight: bold;
+}
+ .content-left2{
+	font: 30px "Arial";
+	/* margin: 30px 159px;   */
+	color: #3c342f;
+	text-align: center;
+	font-weight: bold;
+}
+.content-left3{
+	font: 30px "Arial";
+	/* margin: 0 159px;   */
+	color: #c8e19d;
+	text-align: center;
+	font-weight: bold;
+}
+.sliderA{ 
+        width: 500px;
+        height: 300px;
+        border: 1px solid #888;
+        position: relative;
+        text-align: center;
+		transition: left 0s .75s; 
+    }
+	.sliderA img {
+	width:100%; 
+	height:300px;
+	}
+	.sliderA > input {
+        display: none;
+    }
+
+    .sliderA > input + label {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 8px;
+        background: rgba(90, 90, 90, 0.8);
+        border: 2px solid rgba(190, 190, 190, 0.8);
+
+        cursor: pointer;
+
+        z-index: 100;
+        position: relative;
+
+        margin-right: 4px;
+        top: 90%;
+
+        transition: background 0.8s ease-out 0s;
+    }
+
+    .sliderA > input + label:hover {
+        background: rgba(250, 250, 250, 0.8);
+    }
+
+    .sliderA > input:checked + label {
+        background: rgba(220, 220, 220, 0.8);
+    }
+	
+    .sliderA > div {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 0;
+    }
+	
+    .sliderA > div {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+    }	
+    .sliderA > input:checked + label + div {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    }
+	
+    .sliderA  div  p {
+        position: absolute;
+		font-size:18px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 2px 2px 3px #222;
+    }
+
+#searchform {
+/* float: center; */
+margin: 20px 20px 10px 100px; 
+display: inline-block;
+position: relative;
+}
+#searchform input {
+width: 150px;
+float: left;
+border: none;
+padding-left: 10px;
+height: 40px;
+overflow: hidden;
+outline: none;
+/* color: #9E9C9C; */
+font-style: italic;
+}
+#searchform input:focus {
+outline: 2px solid #EBEBE3;
+}
+
+.post {
+	/* float: center; */
+	font: 15px "Arial";
+	/* text-align: left; */
+	/* margin: 30px 159px;   */
+}
+.basement {  
+	/* width: 33%;  */
+	/* height: 100%;  */
+	margin: 25px 5px; 
+	font: 25px "Arial";
+	 /* margin: 30px 159px;    */
+	color: #9a9a9a;
+	text-align: center;
+	background: url(../images/BACKGROUND2.jpg);
+}
+
+
+
+/* таблицы */
+table td {
+	border: 2px solid #43393a;
+	font: 20px "Arial";
+	text-align: left;
+	padding: 10px;
+	background-color: #dddab9;
+}
+table th {
+	border: 2px solid #43393a;
+	font: 25px "Arial";
+	text-align: center;
+	color: #000;
+	background-color: #af9b80;
+}
+caption {
+	font: 30px "Arial";
+	color: #F0E68C;
+	margin: 5px 0;
+	font-weight: bold;
+}
+.slot {
+	text-align: center;
+}
+.imgnews {
+	max-width: 250px;
+	max-height: 300px;
+}
+
+@media (max-width: 768px) {
+/* показываем кнопку для переключения верхней навигации */
+.nav-toggle {
+display: block;
+}
+#square li, h3 {
+	margin: 0 10px;
+	text-align: left;
+}
+.leftimg, map3 {
+	max-width: 100%;
+	text-align: center;
+}
+header h1{
+padding: 10px 0;
+font: 8vw "Arial";
+color: #F0E68C;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+.leftimg, .map3 {
+	width: 100%;
+	margin: 0 15px;
+}
+.logo {
+	float: none;
+margin: 10px auto;
+height: 35%;
+width: 35%; 
+}
+
+
+#clmenu  {
+    width: 100%;
+    }
+/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */ 
+#clmenu {
+max-height: 0;
+background: #1a3832;
+float: none;
+position: relative;
+overflow: hidden;
+text-align: left;
+/* top: 63px; */
+right: 0;
+left: 0;
+margin: 0;
+padding: 0;
+z-index: 103;
+}
+.sub-menu {
+	position: relative; 
+	/* width: 100%; */
+	display: none; 
+	/* top:40px; */
+	/* left: 0;
+	right: 0; */ 
+}
+/* .sub-menu li { */
+    /* margin-bottom: 1px; */
+/* .sub-menu:hover {
+	display: block;
+	width: 100%; */
+	/* position: s;  */
+/* } */
+	/* top: 0; */
+	/* right: 0; */
+	/* height: 100%; */
+/* } */
+#clmenu li:checked .sub-menu  {
+    background: #fff;
+    color: #2f3036;
+/*     height: 40px; */
+/*     line-height: 40px; */
+        /* box-shadow: 0 2px 2px rgba(0,0,0,0.1); */
+}
+#searchform {
+	text-align: center;
+}
+.sliderA {
+	width: 100%;
+}
+/* делаем элементы списка блочными, чтобы они располагались друг под другом */
+#clmenu li {
+display: block;
+padding-left: 15px;
+border-bottom: 1px solid #EBEBE3;
+margin-right: 0;
+
+}
+/* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/
+.content-right, content-text {
+width: 100%;
+float: none;
+}
+.content-right {
+width: 100%;
+float: none;
+}
+.footer {
+font-size: 1.5em;
+}
+}
+
+
+
+
+@media (max-width: 480px) {
+/* выравниванием логотип по центру */
+nav {
+text-align: center;
+}
+.foton {
+	display: none;
+}
+.fig img{ 
+	position: relative;
+	max-width: 100%;
+	height: 100%;
+}
+#square li, h3 {
+	margin: 0 15px;
+	text-align: left;
+}
+.map3 {
+	margin: 0 15px;
+	/* text-align: center; */
+}
+/* отменяем обтекание для логотипа */
+.logo {
+display: none;
+/* float: none; */
+/* margin: 10px auto; */
+/* height: 35%; */
+/* width: 35%; */
+}
+/* позиционируем меню на увеличившуюся высоту шапки */
+#clmenu {
+top:65%;
+text-align: left;
+}
+/* позиционируем форму поиска по левому краю */
+#searchform{
+float: none;
+
+margin: 0 auto;     
+}
+/* отменяем позиционирование кнопок соцсетей */
+.footer {
+font-size: 1.2em;
+}
+/* отменяем обтекание для столбцов подвала страницы */
+.footer {
+float: none;
+margin-bottom: 20px;
+width: 100%;
+text-align: center;
+}
+.footer:last-child {
+text-align: center;
+margin-bottom: 0;
+}
+.table-res {
+	max-width: 100%;
+	overflow: auto;
+}
+}
+
+video, audio{
+ max-width: 100%;
+ }
+
